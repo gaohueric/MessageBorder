@@ -1,0 +1,135 @@
+
+*{
+    margin: 0px;
+    padding: 0px;
+
+}
+body{
+    background-image: url(../images/1.jpg);
+}
+.container{
+
+    width: 553px;
+    height: 462px;
+    margin: 0 auto;
+    background: #ffffff;
+    position: relative;
+    top:220px;
+    border-radius:20px;
+    text-align: center;
+
+}
+.container h1{
+    padding-left: 10px;
+    padding-top: 26px;
+
+    font-size: 36px;
+    color: gray;
+}
+
+
+
+.from-group1{
+    padding-top: 22px;
+}
+
+.from-group1 .a1{
+   text-decoration: none;
+    display: inline;
+    padding-left: 51px;
+    float: left;
+    font-size: 24px;
+
+}
+.from-group1 .a2{
+    text-decoration: none;
+    display: inline;
+    padding-right: 51px;
+    float: right;
+    font-size: 24px;
+
+}
+.from-group1 .a3{
+    text-decoration: none;
+    display: inline;
+ text-align: center;
+
+    font-size: 24px;
+
+}
+
+
+.from-group{
+    /*padding-left: 80px;*/
+    padding-top: 36px;
+    text-align: center;
+
+}
+.from-control{
+    font-size: 28px;
+    border-radius: 6px;
+    margin: 0 auto;
+
+}
+
+
+
+
+<!--message ÑשÊ½-->
+.container1{
+	width:500px;
+	height:700px;
+	margin-left:auto;
+	margin-right:auto;
+	
+}
+
+.message{
+    width: 60%;
+    height: 700px;
+    background: beige;
+    left: 376px;
+    margin-top: 160px;
+    position: relative;
+    border-radius: 20px;
+
+}
+.message h1{
+    padding-left: 80px;
+    padding-top: 40px;
+
+    font-size: 36px;
+    color: gray;
+}
+.message p{
+    font-size: 24px;
+    padding-left: 80px;
+    line-height: 40px;
+    padding-top: 20px;
+
+}
+
+.from-control3{
+    margin-left: 40px;
+    font-size: 30px;
+    border-radius: 6px;
+
+}
+
+
+.from-group10{
+
+    padding-top: 20px;
+    text-align: center;
+
+}
+.from-group20{
+    padding-left: 76px;
+    padding-top: 30px;
+}
+
+
+
+
+
+

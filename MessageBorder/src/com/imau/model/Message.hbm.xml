@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+	<hibernate-mapping>
+	<class name="com.imau.model.Message" table="tb_message">
+	<id name="id">
+	<generator class="native"/>
+	</id>
+	<property name="title" not-null="true"/>
+	<property name="content" type="text" not-null="true"/>
+	<property name="createTime" />
+	<many-to-one name="user" class="com.imau.model.User" lazy="false">
+	<column name="userid"/>
+	</many-to-one>
+	<many-to-one name="revert" class="com.imau.model.Revert" unique="true" cascade="all" lazy="false"/>
+
+	</class>
+	</hibernate-mapping>
