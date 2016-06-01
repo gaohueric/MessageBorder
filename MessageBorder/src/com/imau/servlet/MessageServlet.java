@@ -1,7 +1,6 @@
 package com.imau.servlet;
 
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.util.Date;
 
 import javax.servlet.ServletException;
@@ -12,9 +11,13 @@ import javax.servlet.http.HttpServletResponse;
 import com.imau.dao.MessageDao;
 import com.imau.model.Message;
 import com.imau.model.User;
+import com.imau.util.PageModel;
 
 public class MessageServlet extends HttpServlet {
-
+	
+public void doGet(HttpServletRequest request,HttpServletResponse response) throws ServletException,IOException{
+	doPost(request, response);
+}
 	/**
 	 * The doPost method of the servlet. <br>
 	 *
@@ -47,7 +50,7 @@ public class MessageServlet extends HttpServlet {
         		   message.setUser(user);
         		   MessageDao dao=new MessageDao();
         		   dao.saveMessage(message);
-        		   request.getRequestDispatcher("index.jsp").forward(request,response);
+        		   request.getRequestDispatcher("MessageServlet?method=view").forward(request, response);
         		   
         		   
         		   
@@ -55,6 +58,22 @@ public class MessageServlet extends HttpServlet {
         		   
         		   
         	   }
+        	   else if("view".equalsIgnoreCase(method)){
+        		   String page = request.getParameter("currPage");
+        		   int currPage = 1;
+        		   int pageSize = 5;
+        		   if(page!=null){
+        			   currPage = Integer.parseInt(page);
+        			   
+        		   }
+        		   MessageDao dao = new MessageDao();
+        		   PageModel pageModel = dao.findPaging(currPage, pageSize);
+        		   request.setAttribute("pageModel", pageModel);
+        		   request.getRequestDispatcher("message_list.jsp").forward(request,response);
+        	   }
+           }
+           else {
+        	   request.getRequestDispatcher("index.jsp").forward(request, response);
            }
 
 	}
