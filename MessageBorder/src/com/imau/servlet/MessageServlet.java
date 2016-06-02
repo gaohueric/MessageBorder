@@ -69,7 +69,7 @@ public void doGet(HttpServletRequest request,HttpServletResponse response) throw
         		   MessageDao dao = new MessageDao();
         		   PageModel pageModel = dao.findPaging(currPage, pageSize);
         		   request.setAttribute("pageModel", pageModel);
-        		   request.getRequestDispatcher("message_list.jsp").forward(request,response);
+        		   request.getRequestDispatcher("index.jsp").forward(request,response);
         	   }
            }
            else {
