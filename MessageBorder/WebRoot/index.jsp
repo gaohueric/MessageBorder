@@ -11,7 +11,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <head lang="en">
     <meta charset="UTF-8">
     <title></title>
-<script type="text/javascript" name="baidu-tc-cerfication" data-appid="8215615" src="http://apps.bdimg.com/cloudaapi/lightapp.js"></script>
+<script type="text/javascript" name="baidu-tc-cerfication" data-appid="8215624" src="http://apps.bdimg.com/cloudaapi/lightapp.js"></script>
   <link type="text/css" rel="stylesheet" href="css/bootstrap.min.css">
      
     <script type="text/javascript">
