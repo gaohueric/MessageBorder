@@ -1,4 +1,4 @@
-<%@ page language="java" import="java.util.*" pageEncoding="utf-8"%>
+﻿<%@ page language="java" import="java.util.*" pageEncoding="utf-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
 <%
@@ -11,6 +11,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <head lang="en">
     <meta charset="UTF-8">
     <title></title>
+<script type="text/javascript" name="baidu-tc-cerfication" data-appid="8215615" src="http://apps.bdimg.com/cloudaapi/lightapp.js"></script>
   <link type="text/css" rel="stylesheet" href="css/bootstrap.min.css">
      
     <script type="text/javascript">
