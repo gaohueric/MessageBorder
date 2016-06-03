@@ -55,7 +55,10 @@ public class PageModel {
       * 获取下一页
       */
      public int getNextPage(){
-    	 return currPage<=0?1:currPage+1;
+    	if(currPage>=getTotalPage()){
+    		return getLastPage();
+    	}
+    	return currPage+1;
      }
      public int getLastPage(){
     	 return getTotalPage()<=0?1:getTotalPage();

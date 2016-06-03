@@ -45,6 +45,6 @@ public User getUser() {
 public void setUser(User user) {
 	this.user = user;
 }
-  
+
  
 }

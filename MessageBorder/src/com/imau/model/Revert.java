@@ -1,6 +1,6 @@
 package com.imau.model;
 
-import java.sql.Date;
+import java.util.Date;
 
 public class Revert {
 	private Integer id;

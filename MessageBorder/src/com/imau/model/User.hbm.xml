@@ -2,17 +2,18 @@
 <!DOCTYPE hibernate-mapping PUBLIC 
 	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
 	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
-	<hibernate-mapping package="com.imau.model">
-	<class name="User" table="tb_User">
-	<id name="id">
-	<generator class="native"/>
-	</id>
-	<discriminator column="type" type="string"/>
-	<property name="username" not-null="true" length="50" unique="true"/>
-	<property name="password" not-null="true" length="50"/>
-	<property name="email" length="50" not-null="true"/>
-	<!--子类-->
-	<subclass name="Guest" discriminator-value="user_guest"/>
-	<subclass name="Administrator" discriminator-value="user_admin"/>
+<hibernate-mapping package="com.imau.model">
+	<class name="User" table="tb_user">
+		<id name="id">
+			<generator class="native"/>
+		</id>
+		<!-- 鉴别器 -->
+		<discriminator column="type" type="string"/>
+		<property name="username" length="50" not-null="true" unique="true"/>
+		<property name="password" length="50" not-null="true"/>
+		<property name="email" length="50" not-null="true"/>
+		<!-- 子类（通过鉴别值进行区分） -->
+		<subclass name="Guest" discriminator-value="user_guest"/>
+		<subclass name="Administrator" discriminator-value="user_admin"/>
 	</class>
-	</hibernate-mapping>
+</hibernate-mapping>

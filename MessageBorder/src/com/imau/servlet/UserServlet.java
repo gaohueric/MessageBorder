@@ -45,7 +45,7 @@ public class UserServlet extends HttpServlet {
             				user.setPassword(password);
             				user.setEmail(email);
             				dao.saveUser(user);
-            				request.getRequestDispatcher("index.jsp").forward(request, response);
+            				request.getRequestDispatcher("MessageServlet?method=view").forward(request, response);
             			}
             		}
             	}
@@ -60,7 +60,7 @@ public class UserServlet extends HttpServlet {
             				
             			}
             			request.getSession().setAttribute("user", user);
-            			request.getRequestDispatcher("index.jsp").forward(request, response);
+            			request.getRequestDispatcher("MessageServlet?method=view").forward(request, response);
             		}
             		else{
             			request.setAttribute("error", "用户名或密码错误");

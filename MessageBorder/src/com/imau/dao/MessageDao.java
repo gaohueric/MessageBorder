@@ -3,11 +3,14 @@ package com.imau.dao;
 
 import java.util.List;
 
+import javax.servlet.SessionTrackingMode;
+
 import org.hibernate.Query;
 import org.hibernate.Session;
 import com.imau.util.PageModel;
 import com.imau.model.Message;
 import com.imau.util.HibernateUtil;
+import com.sun.jndi.url.ldaps.ldapsURLContextFactory;
 
 public class MessageDao {
 	public void saveMessage(Message message){
@@ -27,6 +30,61 @@ public class MessageDao {
 			
 		}
 	}
+	public List<Message> findAllMessage(){
+		Session session = null;
+		List<Message> list = null;
+		try{
+			session = HibernateUtil.getSession();
+			session.beginTransaction();
+			String hql = "from Message";
+            list = session.createQuery(hql).list();
+            session.getTransaction().commit();
+		}
+		catch (Exception e) {
+			e.printStackTrace();
+			session.getTransaction().rollback();
+		}
+		finally{
+			HibernateUtil.closeSession(session);
+		}
+		return list;
+	}
+	public void getMessage(Integer id){
+		Session session = null;
+		Message message = null;
+		try{
+			session = HibernateUtil.getSession();//获取session
+			session.beginTransaction();//开启事物
+			message = (Message)session.get(Message.class,id);
+			session.getTransaction().commit();
+		}
+		catch(Exception e){
+			e.printStackTrace();
+		}
+		finally{
+			HibernateUtil.closeSession(session);
+		}
+	}
+	public void deleteMessage(Integer id){
+		Session session = null;
+		try{
+			session = HibernateUtil.getSession();
+			session.beginTransaction();
+			Message message = (Message)session.get(Message.class,id);
+			session.delete(message);//删除留言
+	        session.getTransaction().commit();
+	        
+			
+		}
+		catch (Exception e) {
+			e.printStackTrace();
+			session.getTransaction().rollback();
+		}
+		finally{
+			HibernateUtil.closeSession(session);
+		}
+	}
+
 	/*
 	 * 分页查询需要的方法 
 	 * 查询总记录数
@@ -66,6 +124,7 @@ public PageModel findPaging(int currPage,int pageSize){
 	}
 	return pageModel;
 }
+
 
 
 
