@@ -13,7 +13,10 @@ import com.imau.model.Administrator;
 import com.imau.model.User;
 
 public class UserServlet extends HttpServlet {
-
+	public void doGet(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+		doPost(request, response);
+	}
 	/**
 	 * The doPost method of the servlet. <br>
 	 *
@@ -67,8 +70,19 @@ public class UserServlet extends HttpServlet {
             			request.getRequestDispatcher("error.jsp").forward(request, response);
             		}
             	}
-            	
-            }   
+            	else if("exit".equalsIgnoreCase(method)){
+    				request.getSession().removeAttribute("user");
+    				if(request.getSession().getAttribute("admin") != null){
+    					request.getSession().removeAttribute("admin");
+    				}
+    				request.getRequestDispatcher("welcome.jsp").forward(request, response);
+    			}
+    				
+            }  
+            else{
+    			request.getRequestDispatcher("welcome.jsp").forward(request, response);
+    		}
 	}
+           
 
 }

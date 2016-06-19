@@ -12,7 +12,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     <meta charset="UTF-8">
     <title></title>
   <link type="text/css" rel="stylesheet" href="css/bootstrap.min.css">
-     
+     <link type="text/css" rel="stylesheet" href="css/ym.css">
     <script type="text/javascript">
     function show(){
     window.location.href="user_login.jsp";
@@ -23,12 +23,15 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 						+ currPage;
 			}
     </script>
+    <style type="text/css">
+  
+    </style>
 </head>
 <body>
 <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
     <div class="container">
         <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header">
+        <div class="navbar-header" >
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
                 <span class="sr-only">Toggle navigation</span>
                 <span class="icon-bar"></span>
@@ -57,11 +60,29 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 </nav>
 <div class="jumbotron">
     <div class="container">
+      <div class="title">
+	 			
+	 			<c:choose>
+	 
+	 				<c:when test="${!empty admin}">
+	 				
+	 					管理员：${user.username}
+	 					<a class="sy" href="welcome.jsp" class="title">首页</a>
+	 					<a href="UserServlet?method=exit">退出</a>
+	 				</c:when>
+	 				<c:otherwise>
+	 					用户名：${user.username}
+	 					<a href="UserServlet?method=exit">退出</a>
+	 				</c:otherwise>
+	 			</c:choose>
+ 			</div>
         <h1>留言板</h1>
         <p>寄存秘密的地方，那些现实中不曾发出的声音，请把它留在这里</p>
        <p>你倾述的地方</p>
         <p><a class="btn btn-default btn-lg" href="user_login.jsp" role="button">发表留言</a></p>
+
     </div>
+   
 </div>
 <div class="container">
     <div class="row">
@@ -214,9 +235,21 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
       
     </div>
     <hr/>
-    <footer>
-        <p>&copy;Company 2016</p>
-    </footer>
+    
 </div>
+<div class="ym1">
+    <footer>
+    
+       <div class="bar">
+		<div class="barContentBox">
+			<img class="logo" src="images/logo.png" alt=""/>
+			<div class="logotext">内蒙古农业大学<br/>imau.edu.cn</div>
+			<div id="info">联系地址：内蒙古呼和浩特市赛罕区昭乌达路306号 邮编：010018<br/>
+			版权所有 © 2014-2015 内蒙古农业大学计算机与信息工程学院</div>
+		</div>
+		</div>
+	
+    </footer>
+    </div>
 </body>
 </html>

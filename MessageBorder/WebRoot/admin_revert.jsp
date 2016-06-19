@@ -1,31 +1,31 @@
-<%@ page language="java" contentType="text/html" pageEncoding="GBK"%>
+<%@ page language="java" contentType="text/html" pageEncoding="utf-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
 	<head>
-		<title>»Ø¸´ÁôÑÔ</title>
+		<title>å›å¤ç•™è¨€</title>
 		<link rel="stylesheet" type="text/css" href="images/style.css">
 	</head>
 
-	<body background="images/bg1.jpg">
+	<body background="./images/bg1.jpg">
 		<c:if test="${empty message or empty admin}">
-			<c:set scope="request" var="error" value="ÄúÎŞÈ¨·ÃÎÊ´ËÒ³£¡£¡£¡"></c:set>
+			<c:set scope="request" var="error" value="æ‚¨æ— æƒè®¿é—®æ­¤é¡µï¼ï¼ï¼"></c:set>
 			<jsp:forward page="error.jsp"></jsp:forward>
 		</c:if>
 		<jsp:include page="head.jsp" />
 		<div align="center">
 			<div align="center" class="div2">
-				<table align="center" width="100%" border="0" bgcolor="#C1C1C1"
+				<table align="center" width="40.74%" border="0" bgcolor="#C1C1C1"
 					cellpadding="1" cellspacing="1">
 					<tr>
 						<td colspan="2" align="center" height="30" bgcolor="#941F53">
-							<font class="title2">»Ø ¸´ Áô ÑÔ</font>
+							<font class="title2">å› å¤ ç•™ è¨€</font>
 						</td>
 					</tr>
 					<tr bgcolor="#FAFAFA">
 						<td align="right" height="25" width="100">
-							<b>±ê Ìâ£º</b>
+							<b>æ ‡ é¢˜ï¼š</b>
 						</td>
 						<td>
 							&nbsp;${message.title}
@@ -33,7 +33,7 @@
 					</tr>
 					<tr bgcolor="#FAFAFA">
 						<td align="right">
-							<b>ÄÚ Èİ£º</b>
+							<b>å†… å®¹ï¼š</b>
 						</td>
 						<td>
 							&nbsp;${message.content}
@@ -41,7 +41,7 @@
 					</tr>
 					<tr bgcolor="#FAFAFA">
 						<td align="right" height="25">
-							<b>Íø ÓÑ£º</b>
+							<b>ç½‘ å‹ï¼š</b>
 						</td>
 						<td>
 							&nbsp;${message.user.username}
@@ -49,7 +49,7 @@
 					</tr>
 					<tr bgcolor="#FAFAFA">
 						<td align="right">
-							<b>»Ø¸´ÁôÑÔ£º</b>
+							<b>å›å¤ç•™è¨€ï¼š</b>
 						</td>
 						<td>
 							<form action="ManagerServlet" method="post">
@@ -63,7 +63,7 @@
 											</textarea>
 										</td>
 										<td align="center" valign="middle">
-											<input type="submit" value="»Ø ¸´" />
+											<input type="submit" value="å› å¤" />
 										</td>
 									</tr>
 								</table>

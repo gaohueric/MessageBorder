@@ -49,7 +49,7 @@ public class MessageDao {
 		}
 		return list;
 	}
-	public void getMessage(Integer id){
+	public Message getMessage(Integer id){
 		Session session = null;
 		Message message = null;
 		try{
@@ -64,6 +64,7 @@ public class MessageDao {
 		finally{
 			HibernateUtil.closeSession(session);
 		}
+		return message;
 	}
 	public void deleteMessage(Integer id){
 		Session session = null;
