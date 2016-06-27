@@ -5,18 +5,30 @@
 <html>
 	<head>
 		<title>回复留言</title>
-		<link rel="stylesheet" type="text/css" href="images/style.css">
+		<link rel="stylesheet" type="text/css" href="css/ym1.css">
+		<style type="text/css">
+		body{
+		background-image:url(images/1.jpg);
+		}
+		</style>
 	</head>
 
 	<body background="./images/bg1.jpg">
+	
 		<c:if test="${empty message or empty admin}">
 			<c:set scope="request" var="error" value="您无权访问此页！！！"></c:set>
 			<jsp:forward page="error.jsp"></jsp:forward>
 		</c:if>
 		<jsp:include page="head.jsp" />
 		<div align="center">
+		<div class="bar1">
+		<div class="barContentBox">
+			<img class="logo" src="images/logo.png" alt=""/>
+			<a href="http://www.imau.edu.cn"><object class="logotext">内蒙古农业大学<br/>imau.edu.cn</object></a>
+		</div>
+	</div>
 			<div align="center" class="div2">
-				<table align="center" width="40.74%" border="0" bgcolor="#C1C1C1"
+				<table align="center" width="42.2%" border="0" bgcolor="#C1C1C1"
 					cellpadding="1" cellspacing="1">
 					<tr>
 						<td colspan="2" align="center" height="30" bgcolor="#941F53">
@@ -74,5 +86,21 @@
 			</div>
 		</div>
 		<jsp:include page="bottom.jsp"></jsp:include>
+		<div class="ym1">
+    <footer>
+    
+       <div class="bar">
+		<div class="barContentBox">
+			<img class="logo" src="images/logo.png" alt=""/>
+			<div class="logotext">内蒙古农业大学<br/>imau.edu.cn</div>
+			<div id="info">联系地址：内蒙古呼和浩特市赛罕区昭乌达路306号 邮编：010018<br/>
+			版权所有 © 2014-2015 内蒙古农业大学计算机与信息工程学院</div>
+		</div>
+		</div>
+	
+    </footer>
+    </div>
+		
+		
 	</body>
 </html>

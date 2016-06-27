@@ -8,7 +8,7 @@
 	<generator class="native"/>
 	</id>
 	<property name="title" not-null="true"/>
-	<property name="content" type="text" not-null="true"/>
+	<property name="content" type="text"  not-null="true"/>
 	<property name="createTime" />
 	<many-to-one name="user" class="com.imau.model.User" lazy="false">
 	<column name="userid"/>
@@ -17,3 +17,4 @@
 
 	</class>
 	</hibernate-mapping>
+	

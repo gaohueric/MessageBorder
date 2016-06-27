@@ -127,6 +127,67 @@ body{
     padding-left: 76px;
     padding-top: 30px;
 }
+/* 脚步*/
+/*脚步*/
+	.ym1{
+	width:100%;
+	height:60px;
+	min-width:1200px;
+	background-color:#2A2C2E;
+	float:left;
+	position:fixed;
+	bottom:0px;
+	left:0px;
+	
+	}
+	
+/*标题栏内容居中*/
+.barContentBox{
+	width:1200px;
+	height:60px;
+	margin:0 auto;}
+	.logo{
+	margin:6px;
+	width:48px;
+	height:48px;
+	float:left;}
+/*logo文本样式*/
+.logotext{
+	height: 30px;
+	float: left;
+	color: #F1F1F1;
+	font-size:12px;
+	line-height: 15px;
+	text-align: center;
+	margin:15px 2px;
+}
+#info{
+	height: 30px;
+	float: left;
+	color: #60686B;
+	font-size:12px;
+	line-height: 15px;
+	text-align: center;
+	margin:15px 250px;
+}
+   /* 头部*/
+   .bar1{
+	width:100%;
+	height:60px;
+	min-width:1200px;
+	background-color:#2A2C2E;
+	float:left;
+	position:fixed;
+	top:0px;
+	left:0px;
+	
+	}
+/*标题栏内容居中*/
+.barContentBox{
+	width:1200px;
+	height:60px;
+	margin:0 auto;}
+
 
 
 
