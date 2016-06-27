@@ -39,6 +39,12 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     </script>
 </head>
 <body>
+  <div class="bar1">
+		<div class="barContentBox">
+			<img class="logo" src="images/logo.png" alt=""/>
+			<a href="http://www.imau.edu.cn"><object class="logotext">内蒙古农业大学<br/>imau.edu.cn</object></a>
+		</div>
+	</div>
 <div class="container">
     <div class="music">
         <h1>用户注册</h1>
@@ -68,5 +74,19 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
         </form>
     </div>
 </div>
+<div class="ym1">
+    <footer>
+    
+       <div class="bar">
+		<div class="barContentBox">
+			<img class="logo" src="images/logo.png" alt=""/>
+			<div class="logotext">内蒙古农业大学<br/>imau.edu.cn</div>
+			<div id="info">联系地址：内蒙古呼和浩特市赛罕区昭乌达路306号 邮编：010018<br/>
+			版权所有 © 2014-2015 内蒙古农业大学计算机与信息工程学院</div>
+		</div>
+		</div>
+	
+    </footer>
+    </div>
 </body>
 </html>
